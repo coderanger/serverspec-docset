@@ -3,6 +3,9 @@ all: copydocs fixfonts icons index Serverspec.docset/Info.plist
 clean:
 	rm -rf Serverspec.docset
 
+tarball: all
+	tar --exclude='.DS_Store' -cvzf Serverspec.tgz Serverspec.docset
+
 site:
 	git clone https://github.com/serverspec/serverspec.github.io.git site
 
