@@ -15,6 +15,7 @@ patch: update
 	sed -i '' 's|href="/"|href="index.html"|g' site/_layouts/layout.html
 	sed -i '' 's|href="/|href="|g' site/_layouts/layout.html
 	sed -i '' 's|src="/|src="|g' site/_layouts/layout.html
+	sed -i '' 's|<title>Serverspec - |<title>|g' site/_layouts/layout.html
 
 build: patch
 	cd site && bundle install --deployment --path ../vendor
